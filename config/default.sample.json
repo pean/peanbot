@@ -1,0 +1,18 @@
+{
+  "slack": {
+    "bot_token": "", // Bot UID
+    "user_token": "", // slack token
+    "api_key": "",
+    "checkin_channel": "", // Channel ID
+    "checkin_monitor": [
+      "user1",
+      "user2"
+    ],
+    "me": "", // UId
+    "devchannel" : "" // Channel ID
+  },
+  "pushbullet": {
+    "token": "",
+    "default_device": "" // Device ID
+  }
+}
