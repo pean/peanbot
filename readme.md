@@ -14,7 +14,7 @@ peanbot is a [slackbot](https://api.slack.com/bot-users) that helps me keep trac
 
 ## Configure Ansible playbook
 
-- Copy `hosts.sample` to hosts and edit. Application will build on localhost and deploy to production host
+- Copy `hosts.sample` to `hosts` and edit. Application will build on localhost and deploy to production host
 
 ## Build & deploy
 
