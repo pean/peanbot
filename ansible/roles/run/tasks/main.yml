@@ -1,0 +1,12 @@
+---
+- name: "Restarting peanbot.."
+  shell: NODE_ENV=production forever restart peanbot_prod
+    chdir=../
+  tags:
+    - run
+
+- name: "Restarting peanbot api.."
+  shell: NODE_ENV=production forever restart peanbot_api_prod
+    chdir=../
+  tags:
+    - run

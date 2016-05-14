@@ -1,0 +1,11 @@
+---
+- name: "Copy app to remote"
+  synchronize:
+    src: ../ 
+    dest: "{{ install_path }}"
+    rsync_opts:
+      - "--exclude=.git*"
+      - "--exclude=ansible"
+      - "--exclude=*.sample.*"
+  tags:
+    - deploy

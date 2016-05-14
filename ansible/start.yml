@@ -1,0 +1,20 @@
+---
+- hosts: prod
+  remote_user: "{{ remote_user }}"
+  tasks:
+    - name: "Stop (if running)"
+      shell: forever stop peanbot_prod ; forever stop peanbot_api_prod
+      ignore_errors: yes
+
+    - name: "Starting peanbot.."
+      shell: NODE_ENV=production forever start -a --uid "peanbot_prod" peanbot.js
+        chdir="{{ install_path }}"
+      tags:
+        - start
+
+    - name: "Restarting peanbot api.."
+      shell: NODE_ENV=production forever start -a --uid "peanbot_api_prod" peanbot_api.js
+        chdir="{{ install_path }}"
+      tags:
+        - api
+        - start

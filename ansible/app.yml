@@ -1,0 +1,10 @@
+---
+- hosts: localhost
+  roles:
+    - build
+
+- hosts: production
+  remote_user: "{{ remote_user }}"
+  roles:
+    - deploy
+    - run

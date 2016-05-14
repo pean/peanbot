@@ -1,0 +1,6 @@
+---
+- name: "Install npm modules"
+  shell: npm install
+    chdir=../
+  tags:
+    - build

@@ -2,6 +2,4 @@ config/*
 !config/default.sample.json
 node_modules
 ansible/hosts
-ansible/hosts_vars/*
-!ansible/hosts_vars/*.sample.yml
 .DS_Store

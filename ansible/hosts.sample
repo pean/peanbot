@@ -1,0 +1,5 @@
+[localhost]
+localhost       ansible_connection=local
+
+[prod]
+127.0.0.1 install_path=/opt/peanbot/ remote_user=peanbot
